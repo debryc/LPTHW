@@ -1,0 +1,76 @@
+# import ex25
+>>> import ex25
+
+# give it a sentence to work with
+>>> sentence = "All good things come to those who wait."
+
+# call on break_words function in ex25
+# break_words separates the words out and puts 
+# single quotes around them
+>>> words = ex25.break_words(sentence)
+
+# prints words
+>>> words
+['All', 'good', 'things', 'come', 'to', 'those', 'who', 'wait.']
+
+# initializes variable sorted_words and gives it
+# value words sorted by alphabetical order
+>>> sorted_words = ex25.sort_words(words)
+
+# prints sorted_words
+>>> sorted_words
+['All', 'come', 'good', 'things', 'those', 'to', 'wait.', 'who']
+
+# prints first word of words (unsorted) after popping it off
+>>> ex25.print_first_word(words)
+All
+
+# prints last word of words (unsorted) after popping it off
+>>> ex25.print_last_word(words)
+wait.
+
+# words spelled incorrectly so gives error message
+# wrods is an undefined variable
+>>> wrods
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'wrods' is not defined
+
+# prints words, now with first and last word popped off
+>>> words
+['good', 'things', 'come', 'to', 'those', 'who']
+
+# prints first word of sorted_words after popping it off
+>>> ex25.print_first_word(sorted_words)
+All
+
+# prints last word of sorted_words after popping it off
+>>> ex25.print_last_word(sorted_words)
+who
+
+# prints sorted_words, now with first and last word off
+>>> sorted_words
+['come', 'good', 'things', 'those', 'to', 'wait.']
+
+# reset sorted_words
+>>> sorted_words = ex25.sort_sentence(sentence)
+# prints sorted_words with all words
+>>> sorted_words
+['All', 'come', 'good', 'things', 'those', 'to', 'wait.', 'who']
+
+# calls on function print_first_and_last
+>>> ex25.print_first_and_last(sentence)
+All
+wait.
+
+# error message because misspells function name
+>>> ex25.pritn_first_and_last_sorted(sentence)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+AttributeError: 'module' object has no attribute 'pritn_first_and_last_sorted'
+>>> ex25.print_first_and_last_sorted(sentence)
+All
+who
+>>> sorted_words
+['All', 'come', 'good', 'things', 'those', 'to', 'wait.', 'who']
+>>> 
